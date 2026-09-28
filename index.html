@@ -12,7 +12,7 @@
     header{background:#fff;border-bottom:1px solid #e9e5d9}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{text-decoration:none;color:var(--green);font-family:Georgia,serif;font-size:1.75rem;letter-spacing:.045em;line-height:1}.brand small{display:block;font:600 .61rem Arial,sans-serif;letter-spacing:.22em;margin-top:8px}
     nav{display:flex;gap:28px;align-items:center}nav a{text-decoration:none;font-size:.91rem;font-weight:600}nav a:hover{color:var(--green)}
-    .nav-cta,.button{display:inline-block;background:var(--green);color:#fff;border-radius:3px;padding:12px 19px;text-decoration:none;font-weight:700}
+    .nav-cta,.button{display:inline-block;background:var(--green);color:#fff;border-radius:3px;padding:12px 19px;text-decoration:none;font-weight:700;border:none;cursor:pointer;font-family:inherit;font-size:.95rem}
     .nav-cta:hover,.button:hover{background:var(--deep)}
     .hero{background:var(--deep);color:#fff;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:530px;height:530px;border:1px solid rgba(201,155,60,.25);border-radius:50%;right:-220px;top:-160px;pointer-events:none}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center;padding:85px 0 92px}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem}
@@ -23,15 +23,37 @@
     section{padding:86px 0}.section-intro{max-width:700px;margin-bottom:38px}.section-intro h2{font-size:clamp(2.35rem,4vw,3.7rem);margin:12px 0 16px;color:var(--green)}.section-intro p{font-size:1.08rem;color:var(--muted);margin:0}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #e7e2d6;padding:33px 30px;min-height:320px;border-top:4px solid var(--gold)}
     .card .num{font:700 .78rem Arial,sans-serif;color:#a7771c;letter-spacing:.15em}.card h3{color:var(--green);font-size:1.75rem;margin:16px 0 17px}
-    ul{margin:0;padding-left:1.25em}li{padding:3px 0}.approach{background:#e9eee8}.approach-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:start}.approach h2{font-size:clamp(2.25rem,4vw,3.6rem);color:var(--green);margin:14px 0}.approach p{font-size:1.12rem}.values{border-left:2px solid var(--gold);padding-left:30px}.values p{margin:0 0 23px}.values strong{display:block;color:var(--green);font-size:1.05rem}
-    .contact{background:#fff}.contact-box{background:var(--deep);color:#fff;padding:48px 55px;display:flex;justify-content:space-between;align-items:center;gap:50px}.contact h2{font-size:clamp(2.2rem,4vw,3.5rem);margin:10px 0 15px}.contact p{max-width:610px;margin:0;color:#dbe7dd}.contact-note{border-left:2px solid var(--gold);padding-left:22px;min-width:225px}.contact-note strong{display:block;color:#f2d595}.contact-note span{color:#e4ece5}
+    ul{margin:0;padding-left:1.25em}li{padding:3px 0}
+    .approach{background:#e9eee8}.approach-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:start}.approach h2{font-size:clamp(2.25rem,4vw,3.6rem);color:var(--green);margin:14px 0}
+    .approach p{font-size:1.12rem}.values{border-left:2px solid var(--gold);padding-left:30px}.values p{margin:0 0 23px}.values strong{display:block;color:var(--green);font-size:1.05rem}
+    
+    /* Contact Section Styling */
+    .contact{background:#fff}
+    .contact-box{background:var(--deep);color:#fff;padding:55px;display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start;border-radius:4px}
+    .contact h2{font-size:clamp(2.2rem,4vw,3.5rem);margin:10px 0 15px}
+    .contact p{margin:0 0 30px;color:#dbe7dd}
+    .contact-note{border-left:2px solid var(--gold);padding-left:22px}
+    .contact-note strong{display:block;color:#f2d595;margin-bottom:4px}
+    .contact-note span{color:#e4ece5}
+    
+    /* Form Specific Elements */
+    .contact-form{display:flex;flex-direction:column;gap:18px}
+    .form-group{display:flex;flex-direction:column;gap:6px}
+    .form-group label{font-size:.85rem;font-weight:700;color:#e4ece5;letter-spacing:.05em;text-transform:uppercase}
+    .form-group input, .form-group textarea{width:100%;padding:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff;font-family:inherit;font-size:1rem;border-radius:3px;transition:border-color .2s}
+    .form-group input:focus, .form-group textarea:focus{outline:none;border-color:var(--gold)}
+    .contact-form .button{background:var(--gold);color:#183829;align-self:flex-start;padding:14px 28px}
+    .contact-form .button:hover{background:#e2b454}
+
     footer{padding:32px 0;background:#072c1e;color:#d6e1d8;font-size:.88rem}.foot{display:flex;justify-content:space-between;gap:20px}footer a{color:#fff}
-    @media(max-width:850px){.hero-grid,.approach-grid{grid-template-columns:1fr}.hero-grid{padding:66px 0}.hero-art{max-width:580px;height:350px}.cards{grid-template-columns:1fr 1fr}.contact-box{display:block}.contact-note{margin-top:27px}}
-    @media(max-width:640px){.wrap{width:min(100% - 32px,1160px)}.nav{align-items:flex-start;padding:18px 0;flex-direction:column;gap:17px}nav{gap:18px;flex-wrap:wrap}nav a{font-size:.87rem}.nav-cta{padding:8px 12px}section{padding:65px 0}.hero-grid{gap:35px;padding:60px 0 70px}.hero-art{height:290px;box-shadow:10px 10px 0 rgba(201,155,60,.19)}.cards{grid-template-columns:1fr}.card{min-height:0}.contact-box{padding:36px 25px}.foot{flex-direction:column}}
+    
+    @media(max-width:850px){.hero-grid,.approach-grid{grid-template-columns:1fr}.hero-grid{padding:66px 0}.hero-art{max-width:580px;height:350px}.cards{grid-template-columns:1fr 1fr}.contact-box{grid-template-columns:1fr;gap:40px;padding:40px 30px}.contact-note{margin-top:10px}}
+    @media(max-width:640px){.wrap{width:min(100% - 32px,1160px)}.nav{align-items:flex-start;padding:18px 0;flex-direction:column;gap:17px}nav{gap:18px;flex-wrap:wrap}nav a{font-size:.87rem}.nav-cta{padding:8px 12px}section{padding:65px 0}.hero-grid{gap:35px;padding:60px 0 70px}.hero-art{height:290px;box-shadow:10px 10px 0 rgba(201,155,60,.19)}.cards{grid-template-columns:1fr}.card{min-height:0}.foot{flex-direction:column}}
   </style>
 </head>
 <body>
   <header><div class="wrap nav"><a href="#top" class="brand" aria-label="Livora Health and Home Care home">LIVORA<small>HEALTH &amp; HOME CARE</small></a><nav aria-label="Main navigation"><a href="#services">Services</a><a href="#about">Our approach</a><a class="nav-cta" href="#contact">Contact</a></nav></div></header>
+  
   <main id="top">
     <div class="hero"><div class="wrap hero-grid">
       <div><span class="eyebrow">Prince George, British Columbia</span><h1>Care that feels <em>like home.</em></h1>
@@ -41,15 +63,52 @@
       <div class="hero-art">
         <img src="./livora-logo.jpg" alt="Livora Health & Home Care logo, with a home, caring hands and two people">
       </div></div></div>
+      
     <section id="services"><div class="wrap"><div class="section-intro"><span class="eyebrow">What we do</span><h2>Support for everyday life at home</h2><p>Services are shaped around each person's needs, preferences and service plan.</p></div><div class="cards">
-      <article class="card"><span class="num">01 / CARE</span><h3>Personal care &amp; daily living</h3><ul><li>Bathing, hygiene, grooming and dressing</li><li>Toileting and continence assistance</li><li>Mobility and transfer support within the service plan</li><li>Meal setup and eating assistance</li><li>Medication reminders within our non-medical scope</li></ul></article>
-      <article class="card"><span class="num">02 / HOME</span><h3>Home &amp; homemaking support</h3><ul><li>Routine housekeeping and cleaning</li><li>Laundry and linen support</li><li>Kitchen and bathroom cleaning</li><li>Organization and light decluttering</li><li>Meal preparation and household assistance</li></ul></article>
+      <article class="card">
+        <span class="num">01 / CARE</span>
+        <h3>Personal care &amp; daily living</h3>
+        <ul>
+          <li>Bathing, hygiene, grooming and dressing</li>
+          <li>Toileting and continence assistance</li>
+          <li>Mobility and transfer support within the service plan</li>
+          <li>Meal setup and eating assistance</li>
+          <li>Medication reminders within our non-medical scope</li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="num">02 / HOME</span>
+        <h3>Home &amp; homemaking support</h3>
+        <ul>
+          <li>Routine housekeeping and cleaning</li>
+          <li>Laundry and linen support</li>
+          <li>Kitchen and bathroom cleaning</li>
+          <li>Organization and light decluttering</li>
+          <li>Meal preparation and household assistance</li>
+        </ul></article>
       <article class="card"><span class="num">03 / CONNECTION</span><h3>Companionship &amp; practical support</h3><ul><li>Companionship and meaningful social support</li><li>Shopping and errands</li><li>Transportation support when arranged</li><li>Community participation and everyday activities</li><li>Support that respects routines, culture and personal choices</li></ul></article>
     </div></div></section>
-    <section class="approach" id="about"><div class="wrap approach-grid"><div><span class="eyebrow">The Livora approach</span><h2>Making every day easier</h2><p>Our mission is to help people feel cared for and comfortable at home through personal care, support with everyday needs, and respect for the way they choose to live.</p></div><div class="values"><p><strong>Dignity and independence</strong>We encourage personal choice and support each person with respect.</p><p><strong>Care shaped around you</strong>We take time to understand routines, preferences and what matters most at home.</p><p><strong>Comfort and trust</strong>We bring a professional approach to privacy, safety and dependable everyday help.</p></div></div></section>
-    <section class="contact" id="contact"><div class="wrap contact-box"><div><span class="eyebrow">Connect with Livora</span><h2>Let's make every day easier.</h2><p>Talk with us about the support that would make home life safer, more comfortable and easier to manage.</p></div><div class="contact-note"><strong>Contact details</strong><span>Phone and email will be added before public launch.</span></div></div></section>
-  </main>
-  <footer><div class="wrap foot"><span>©️ <span id="year">2026</span> Livora Health &amp; Home Care</span><span>Non-medical home care and household support · Prince George, BC</span></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+    
+    <section class="approach" id="about"><div class="wrap approach-grid">
+      <div><span class="eyebrow">The Livora approach</span><h2>Making every day easier</h2><p>Our mission is to help people feel cared for and comfortable at home through personal care, support with everyday needs, and respect for the way they choose to live.</p></div>
+      <div class="values">
+        <p><strong>Dignity and independence</strong>We encourage personal choice and support each person with respect.</p>
+        <p><strong>Care shaped around you</strong>We provide consistent, reliable services built entirely around your needs and daily schedule.</p>
+      </div>
+    </div></section>
+
+    <!-- Form Integrated into the Contact Section -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <span class="eyebrow" style="color:var(--gold)">Get in touch</span>
+            <h2>We are here to help</h2>
+            <p>Have questions about our care services or want to discuss a customized plan for your family? Reach out to us today.</p>
+            <div class="contact-note">
+              <strong>Location Support</strong>
+              <span>Prince George, BC and surrounding areas</span>
+            </div>
+          </div>
+          
+          <form class="contact-form" action="mailto:rimplekaur1997@gmail.com" method="GET" enctype="text/plain">
